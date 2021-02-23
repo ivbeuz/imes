@@ -1,0 +1,9 @@
+If you want exact balances in the Python runs, please adjust the 'math_prog_imes'. 
+If you want least cost, keep it as is. 
+
+On line 226, change the <= to a ==, this means the main balance constraint becomes an equality, instead of an inequality. 
+CURRENT CODE (inequality)
+model.Demand[energy_type, location, time_period] <=\
+
+ADJUST FOR EXACT BALANCE (equality)
+model.Demand[energy_type, location, time_period] ==\
